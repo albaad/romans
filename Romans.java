@@ -8,9 +8,9 @@ import java.math.*;
  **/
 public class Romans {
 
-	private static int[] numbers = { 1000, 900, 500, 400, 100, 90, 
+	public static int[] numbers = { 1000, 900, 500, 400, 100, 90, 
 			50, 40, 10, 9, 5, 4, 1 };
-	private static String[] letters = { "M", "CM", "D", "CD", "C", 
+	public static String[] letters = { "M", "CM", "D", "CD", "C", 
 			"XC", "L", "XL", "X", "IX", "V", "IV", "I" };
 
 	public static int value(char c) {
@@ -61,7 +61,7 @@ public class Romans {
 		return total;
 	}
 
-	private static String toRoman(int total) {
+	public static String toRoman(int total) {
 		String roman = "";
 		int N = total;
 		
@@ -74,17 +74,4 @@ public class Romans {
 		return roman;
 	}
 	
-	public static void main(String args[]) {
-		Scanner in = new Scanner(System.in);
-		String rom1 = in.next();
-		String rom2 = in.next();
-
-		int r1 = toInt(rom1);
-		int r2 = toInt(rom2);
-		int total = r1 + r2;
-
-		String totalR = toRoman(total);
-
-		System.out.print(totalR);
-	}
 }
